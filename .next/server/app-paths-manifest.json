@@ -1,4 +1,6 @@
 {
-  "/fleet/page": "app/fleet/page.js",
-  "/settings/page": "app/settings/page.js"
+  "/branches/page": "app/branches/page.js",
+  "/missions/page": "app/missions/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js"
 }

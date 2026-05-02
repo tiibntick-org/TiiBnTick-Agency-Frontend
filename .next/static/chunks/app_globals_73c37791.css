@@ -260,6 +260,10 @@ body {
   font-family: Inter, system-ui, -apple-system, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -282,6 +286,10 @@ body {
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .inset-0 {
@@ -342,6 +350,10 @@ body {
 
 .top-full {
   top: 100%;
+}
+
+.bottom-0 {
+  bottom: 0;
 }
 
 .z-10 {

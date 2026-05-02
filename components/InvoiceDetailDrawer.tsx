@@ -47,8 +47,19 @@ export default function InvoiceDetailDrawer({ mission, open, onClose }: Props) {
       title={`Facture — ${mission.manifestNumber}`}
       description={`Mission ${mission.id} · ${new Date(mission.createdAt).toLocaleDateString('fr-FR')}`}
       size="lg"
+      footer={
+        <div className="flex gap-3">
+          <button className="flex-1 h-10 inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <Printer size={15} />
+            Imprimer
+          </button>
+          <button className="flex-1 h-10 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-lg transition-colors">
+            Exporter PDF
+          </button>
+        </div>
+      }
     >
-      <div className="flex-1 overflow-y-auto">
+      <div>
         {/* Status bar */}
         <div className="px-6 py-3 bg-emerald-50 border-b border-gray-100 flex items-center gap-2">
           <CheckCircle2 size={15} className="text-emerald-600" />
@@ -187,16 +198,6 @@ export default function InvoiceDetailDrawer({ mission, open, onClose }: Props) {
             </div>
           </div>
 
-          {/* Actions */}
-          <div className="flex gap-3">
-            <button className="flex-1 h-10 inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
-              <Printer size={15} />
-              Imprimer
-            </button>
-            <button className="flex-1 h-10 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-lg transition-colors">
-              Exporter PDF
-            </button>
-          </div>
         </div>
       </div>
     </Drawer>

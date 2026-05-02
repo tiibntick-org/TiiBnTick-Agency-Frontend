@@ -65,7 +65,7 @@ export default function BranchDetailDrawer({ branch, open, onClose }: Props) {
       description={`${branch.city} · ${branch.id}`}
       size="lg"
     >
-      <div className="flex-1 overflow-y-auto">
+      <div>
         {/* Status banner */}
         <div className={`px-6 py-3 flex items-center gap-3 border-b border-gray-100 ${branch.status === 'OPEN' ? 'bg-emerald-50' : 'bg-orange-50'}`}>
           <div className={`flex items-center gap-2 text-sm font-medium ${branch.status === 'OPEN' ? 'text-emerald-700' : 'text-orange-700'}`}>
